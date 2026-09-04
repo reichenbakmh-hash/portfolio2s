@@ -122,6 +122,18 @@ export default function Hero() {
           </div>
         </motion.div>
       </div>
+
+      <motion.a
+        href="#a-propos"
+        aria-label="Découvrir la suite"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 1 }}
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 sm:flex"
+      >
+        <span className="font-body text-xs tracking-wide text-inkfade/70">Découvrir</span>
+        <span className="h-9 w-[1px] animate-drift bg-plum/40" />
+      </motion.a>
     </section>
   );
 }
