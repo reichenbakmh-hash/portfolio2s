@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import RevealSection from "./RevealSection";
-import { education } from "@/lib/data";
+import { education, quotes } from "@/lib/data";
 
 export default function Education() {
   const [openIndex, setOpenIndex] = useState(0);
@@ -55,6 +55,8 @@ export default function Education() {
             );
           })}
         </div>
+
+        <p className="mt-10 font-script text-xl italic text-plum">« {quotes[2]} »</p>
       </div>
     </RevealSection>
   );
