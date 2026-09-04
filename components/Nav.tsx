@@ -13,12 +13,33 @@ const links = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    const sections = links
+      .map((l) => document.querySelector(l.href))
+      .filter((el): el is Element => Boolean(el));
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(`#${entry.target.id}`);
+          }
+        });
+      },
+      { rootMargin: "-45% 0px -45% 0px" }
+    );
+
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
   }, []);
 
   return (
@@ -41,7 +62,9 @@ export default function Nav() {
             <a
               key={l.href}
               href={l.href}
-              className="font-body text-sm text-inkfade transition-colors hover:text-mauveblush"
+              className={`font-body text-sm transition-colors hover:text-mauveblush ${
+                active === l.href ? "text-mauveblush" : "text-inkfade"
+              }`}
             >
               {l.label}
             </a>
@@ -71,7 +94,9 @@ export default function Nav() {
               key={l.href}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="rounded-2xl px-4 py-3 font-body text-sm text-inkfade hover:bg-cream hover:text-mauveblush"
+              className={`rounded-2xl px-4 py-3 font-body text-sm hover:bg-cream hover:text-mauveblush ${
+                active === l.href ? "bg-cream text-mauveblush" : "text-inkfade"
+              }`}
             >
               {l.label}
             </a>
