@@ -1,14 +1,14 @@
 export const profile = {
   name: "Stéphie",
   fullName: "Ramangalahy Ainanirina Stéphie",
-  age: 20,
+  age: 21,
   study: "Master Administration",
   personality: "INFP",
   location: "Ankadindravola Ivato, ACO1",
   phone: "+261 038 55 759 96",
   email: "chocobarbubletea@gmail.com",
   about:
-    "Je m'appelle Ramangalahy Ainanirina Stéphie, j'ai 20 ans et je souhaiterais apporter mon expertise à la dynamique de votre entreprise. Passionnée et motivée, ce serait avec plaisir que je vous apporterais mon savoir-faire, avec persévérance et professionnalisme."
+    "Je m'appelle Ramangalahy Ainanirina Stéphie, j'ai 21 ans et je souhaiterais apporter mon expertise à la dynamique de votre entreprise. Passionnée et motivée, ce serait avec plaisir que je vous apporterais mon savoir-faire, avec persévérance et professionnalisme."
 };
 
 export const typingWords = ["Curieuse.", "Créative.", "À l'écoute.", "En apprentissage."];
@@ -22,7 +22,7 @@ export const qualities = [
 
 export const languages = [
   { label: "Français", level: 5 },
-  { label: "Anglais", level: 4 },
+  { label: "Anglais", level: 5 },
   { label: "Espagnol", level: 3 }
 ];
 
@@ -60,7 +60,7 @@ export const education = [
   { degree: "Brevet", school: "Collège P'tit Michou", period: "2019" }
 ];
 
-export const interests = ["Formation continue", "Lecture", "Voyages", "Cuisine"];
+export const interests = ["Art littéraire", "Lecture", "Voyages", "Cuisine"];
 
 export const quotes = [
   "On ne bâtit rien de solide sans un peu de douceur.",
