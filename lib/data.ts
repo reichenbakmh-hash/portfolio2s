@@ -27,13 +27,13 @@ export const languages = [
 ];
 
 export const skills = [
-  "Maîtrise des logiciels bureautiques",
-  "Rédaction web",
-  "Relation clients",
-  "Négociation commerciale et marketing",
-  "Administration & dactylographie",
-  "Aisance relationnelle"
-];
+  { label: "Maîtrise des logiciels bureautiques", icon: "Laptop" },
+  { label: "Rédaction web", icon: "PenLine" },
+  { label: "Relation clients", icon: "Users" },
+  { label: "Négociation commerciale et marketing", icon: "Handshake" },
+  { label: "Administration & dactylographie", icon: "FileText" },
+  { label: "Aisance relationnelle", icon: "MessageCircle" }
+] as const;
 
 export const experiences = [
   {
@@ -67,4 +67,3 @@ export const quotes = [
   "Chaque nouveau dossier est une nouvelle page à écrire avec soin.",
   "Apprendre, c'est la seule habitude que je ne veux jamais perdre."
 ];
-
