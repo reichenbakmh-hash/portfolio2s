@@ -1,5 +1,22 @@
+import {
+  FileText,
+  Handshake,
+  Laptop,
+  MessageCircle,
+  PenLine,
+  Users
+} from "lucide-react";
 import RevealSection from "./RevealSection";
 import { skills } from "@/lib/data";
+
+const icons = {
+  Laptop,
+  PenLine,
+  Users,
+  Handshake,
+  FileText,
+  MessageCircle
+};
 
 export default function Skills() {
   return (
@@ -11,14 +28,18 @@ export default function Skills() {
         </p>
 
         <div className="mt-10 flex flex-wrap gap-4">
-          {skills.map((skill) => (
-            <div
-              key={skill}
-              className="group cursor-default rounded-2xl border border-plum/20 bg-cream px-5 py-3 font-body text-sm text-ink transition-all duration-300 hover:-translate-y-1.5 hover:border-mauveblush hover:bg-blush/15"
-            >
-              {skill}
-            </div>
-          ))}
+          {skills.map((skill) => {
+            const Icon = icons[skill.icon];
+            return (
+              <div
+                key={skill.label}
+                className="group flex cursor-default items-center gap-3 rounded-2xl border border-plum/20 bg-cream px-5 py-3 font-body text-sm text-ink transition-all duration-300 hover:-translate-y-1.5 hover:border-mauveblush hover:bg-blush/15"
+              >
+                <Icon size={18} className="shrink-0 text-plum group-hover:text-mauveblush" />
+                {skill.label}
+              </div>
+            );
+          })}
         </div>
       </div>
     </RevealSection>
