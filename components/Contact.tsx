@@ -95,16 +95,6 @@ export default function Contact() {
           )}
         </form>
       </div>
-
-      <div className="mx-auto mt-24 flex max-w-5xl flex-col items-center gap-2 border-t border-plum/15 px-6 pt-8 text-center">
-        <p className="font-display text-lg text-ink">
-          Stéphie<span className="text-mauveblush">.</span>
-        </p>
-        <p className="font-body text-sm text-inkfade">
-          © {new Date().getFullYear()} {profile.fullName}. Fait avec douceur.
-        </p>
-      </div>
     </RevealSection>
   );
 }
-
