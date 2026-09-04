@@ -3,7 +3,6 @@ import Contact from "@/components/Contact";
 import CustomCursor from "@/components/CustomCursor";
 import Education from "@/components/Education";
 import Experience from "@/components/Experience";
-import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Nav from "@/components/Nav";
 import Petals from "@/components/Petals";
@@ -23,7 +22,6 @@ export default function Home() {
       <Education />
       <Qualities />
       <Contact />
-      <Footer />
     </main>
   );
 }
