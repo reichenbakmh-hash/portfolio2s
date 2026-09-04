@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import RevealSection from "./RevealSection";
 import { profile } from "@/lib/data";
 
-const FORM_ENDPOINT = "https://formspree.io/f/VOTRE_ID_FORMSPREE";
+const FORM_ENDPOINT = "https://formspree.io/f/mgaezpqb";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -98,3 +98,4 @@ export default function Contact() {
     </RevealSection>
   );
 }
+
